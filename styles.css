@@ -7,7 +7,7 @@ body
  {
     position: relative;
     text-align: left;
-    margin-top: 10%;
+    margin-top: 25%;
     margin-bottom: 20px;
 }
 
@@ -26,9 +26,9 @@ body
 {
     width: 100%;
     padding-right: 15px;
-    padding-left: 150px;
+    padding-left: 15px;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 20%;
 }
 
 .row
@@ -52,36 +52,32 @@ body
 {
     margin: 50px auto;
     display: block;
-    width: 1000px;
-    height: 100px;
+    width: 1500px;
+    height: 50px;
     position: relative;
     overflow: hidden;
 }
 
 .representation-words span
 {
-    margin-left: -1%;
-}
-
-.animated-text
-{
     display: inline;
     position: absolute;
-    left: 0px;
+    left: 20px;
+    margin-left: -1%;
     animation-name: slidein;
-    animation-duration: 2s;
-    animation-delay: 4s;
+    animation-duration: 3s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
-.animated-text::before
+.animated-text:before
 {
     content: "Console.WriteLine(";
     animation-name: slidein2;
     animation-duration: 3s;
-    animation-delay: 12s;
+    animation-delay: 5s;
     animation-fill-mode: forwards;
-    left: -500px;
+    left: -1200px;
     position: absolute;
 }
 
@@ -166,22 +162,6 @@ h5
     animation: border-flicking 4s infinite;
 }
 
-@keyframes border-flicking
-{
-    0%
-    {
-        visibility: hidden;
-    }
-    50%
-    {
-        visibility: visible;
-    }
-    100%
-    {
-        visibility: hidden;
-    }
-}
-
 @keyframes slidein
 {
     from
@@ -190,7 +170,7 @@ h5
     }
     to
     {
-        left: 500px;
+        left: 480px;
     }
 }
 
@@ -202,7 +182,7 @@ h5
     }
     to
     {
-        left: -12px;
+        left: -460px;
     }
 }
 
@@ -214,7 +194,7 @@ h5
     }
     to
     {
-        right: -106px;
+        right: -210px;
     }
 }
 
@@ -224,4 +204,36 @@ h5
     src: local("Arvo"), 
     local("Arvo-Regular"), 
     url("./fonts/Arvo-Regular.ttf") format("ttf");
+}
+
+@media (min-width: 1200px)
+{
+    .container
+    {
+        max-width: 2000px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .container
+    {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .container
+    {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 576px)
+{
+    .container
+    {
+        max-width: 540px;
+    }
 }
