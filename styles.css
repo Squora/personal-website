@@ -1,0 +1,227 @@
+body
+{
+    font-family: 'Arvo';
+}
+
+.home-banner-area .banner-inner .banner-content 
+ {
+    position: relative;
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 20px;
+}
+
+.home-banner-area
+{
+    z-index: 1;
+    height: 100%;
+    max-height: 100vh;
+    overflow: none;
+    background: url() no-repeat top center;
+    background-position: center;
+    background-size: cover;
+}
+
+.container
+{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 150px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row
+{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 100%;
+}
+
+.representation-words
+{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.representation-words div
+{
+    margin: 50px auto;
+    display: block;
+    width: 1000px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.representation-words span
+{
+    margin-left: -1%;
+}
+
+.animated-text
+{
+    display: inline;
+    position: absolute;
+    left: 0px;
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+.animated-text::before
+{
+    content: "Console.WriteLine(";
+    animation-name: slidein2;
+    animation-duration: 3s;
+    animation-delay: 12s;
+    animation-fill-mode: forwards;
+    left: -500px;
+    position: absolute;
+}
+
+.animated-text::after
+{
+    content: "world!);";
+    animation-name: slidein3;
+    animation-duration: 3s;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+    right: -2000px;
+    position: absolute;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+h5
+{
+    font-size: 24px;
+    margin-top: -3%;
+}
+
+.button
+ {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover
+{
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button:focus 
+{
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.button span
+{
+    font-family: 'Arvo';
+    font-weight: bolder;
+    color: black;
+}
+
+
+.border
+{
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: border-flicking 4s infinite;
+}
+
+@keyframes border-flicking
+{
+    0%
+    {
+        visibility: hidden;
+    }
+    50%
+    {
+        visibility: visible;
+    }
+    100%
+    {
+        visibility: hidden;
+    }
+}
+
+@keyframes slidein
+{
+    from
+    {
+
+    }
+    to
+    {
+        left: 500px;
+    }
+}
+
+@keyframes slidein2
+{
+    from
+    {
+
+    }
+    to
+    {
+        left: -12px;
+    }
+}
+
+@keyframes slidein3
+{
+    from
+    {
+
+    }
+    to
+    {
+        right: -106px;
+    }
+}
+
+@font-face 
+{
+    font-family: "Arvo";
+    src: local("Arvo"), 
+    local("Arvo-Regular"), 
+    url("./fonts/Arvo-Regular.ttf") format("ttf");
+}
